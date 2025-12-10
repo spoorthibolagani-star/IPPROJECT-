@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternative Protein & Nutritional Supplements</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+
+    /* Navbar */
+    nav {
+      background: #2b8aef;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 18px;
+      margin: 0 5px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Page sections */
+    .page {
+      display: none;
+      padding: 30px;
+      animation: fade 0.4s;
+    }
+
+    /* Show home page first */
+    #home {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    h1 {
+      color: #2b8aef;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2b8aef;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #1e6ac7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('products')">Products</a>
+    <a onclick="showPage('benefits')">Benefits</a>
+    <a onclick="showPage('faq')">FAQ</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <!-- Home Page -->
+  <section id="home" class="page">
+    <h1>Welcome to Alternative Protein</h1>
+
+    <h2>Alternative Proteins</h2>
+
+    <img src="C:\Users\kiran\OneDrive\Desktop\altpro.jpg" width="200" height="200">
+
+    <p>Alternative proteins are non-traditional sources of protein that replace or reduce the use of animal-based proteins.</p>
+    <p>They are made from plants, microorganisms, or lab-grown cells.</p>
+    <p>They provide similar nutrients but are more sustainable and environment-friendly.</p>
+
+    <h3>Why do we need Alternative Proteins?</h3>
+    <p>✔ Growing population → more protein demand</p>
+    <p>✔ Traditional meat → pollution, water use, deforestation</p>
+    <p>✔ Health concerns → cholesterol & fats</p>
+    <p>✔ Ethical concerns → animal welfare</p>
+  </section>
+
+  <!-- Products Page -->
+  <section id="products" class="page">
+    <h1>Products</h1>
+
+    <div class="card">
+      <img src="C:\Users\kiran\OneDrive\Desktop\pea.jpg" width="180">
+      <p><b>Pea Protein – 1kg</b></p>
+      <p>20g protein • 100% plant</p>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\kiran\OneDrive\Desktop\blend.jpg" width="180">
+      <p><b>Protein Blend – 800g</b></p>
+      <p>Pea + Rice + Hemp</p>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\kiran\OneDrive\Desktop\bar.jpg" width="180">
+      <p><b>Protein Bars (12 pack)</b></p>
+    </div>
+
+    <div class="card">
+      <img src="C:\Users\kiran\OneDrive\Desktop\vit.jpg" width="180">
+      <p><b>Daily Multivitamin</b></p>
+    </div>
+  </section>
+
+  <!-- Benefits Page -->
+  <section id="benefits" class="page">
+    <h1>Benefits</h1>
+    <ul>
+      <li>Environmentally friendly</li><br>
+      <li>Lower in fat & cholesterol</li><br>
+      <li>Suitable for vegans & lactose-intolerant people</li><br>
+      <li>High protein supports muscle growth</li><br>
+      <li>Reduces risk of diseases</li><br>
+      <li>Sustainable for future</li><br> 
+    </ul>
+  </section>
+
+  <!-- FAQ Page -->
+  <section id="faq" class="page">
+    <h1>Frequently Asked Questions</h1>
+    <ul>
+      <li>Are alternative proteins safe?</li><br>
+      <li>Who should take supplements?</li><br>
+      <li>Are supplements necessary?</li><br>
+      <li>Types of protein supplements?</li><br>
+      <li>Side effects?</li><br>
+      <li>Can they replace meat?</li><br>
+      <li>Are they good for weight loss?</li>
+    </ul>
+  </section>
+
+  <!-- Contact Page -->
+  <section id="contact" class="page">
+    <h1>Contact Us</h1>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <textarea rows="4" placeholder="Message"></textarea>
+    <button>Submit</button>
+  </section>
+
+  <!-- JAVASCRIPT (corrected) -->
+  <script>
+    function showPage(pageId) {
+      var pages = document.querySelectorAll('.page');
+
+      pages.forEach(function(page) {
+        page.style.display = 'none';
+      });
+
+      document.getElementById(pageId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
